@@ -1,146 +1,138 @@
 .text {
-  flex-grow: 2;
-  color:$dark_blue;
+    flex-grow: 2;
+    color: $dark_blue;
 
-  h1 {
-    text-align: center;
-    padding: 1.25em;
-  }
+    h1 {
+        text-align: center;
+        padding: 1.25em;
+    }
 }
 
 .topic {
-  padding: 2.25em;
-  border-bottom: solid 1px $light_blue;
-  font-size: $font-sm;
-  color:$dark_blue;
-  text-align: left;
+    padding: 2.25em;
+    border-bottom: solid 1px $light_blue;
+    font-size: $font-sm;
+    color: $dark_blue;
+    text-align: left;
 }
 
 .open {
-  cursor: pointer;
-  display: block;
-  padding: 0em;
+    cursor: pointer;
+    display: block;
+    padding: 0em;
 
-  &:hover {
-    color:$grayish_blue;
-
-  }
+    &:hover {
+        color: $grayish_blue;
+    }
 }
 
 .expanded {
-  background-color: $white;
-  transition: all .8s ease-in-out;
+    background-color: $white;
+    transition: all 0.8s ease-in-out;
 }
 
 .ptag {
-  display: none;
+    display: none;
 }
 
 .question {
-  padding: 2em 10em 1.5em 0;
-  font-weight:$font-light;
+    padding: 2em 10em 1.5em 0;
+    font-weight: $font-light;
 
-  @include breakpoint-down(small){
-    padding-right: 0px;
-  }
+    @include breakpoint-down(small) {
+        padding-right: 0px;
+    }
 }
 
 .answer {
-  line-height: 1.25rem;
-  display: none;
-  text-align: justify;
+    line-height: 1.25rem;
+    display: none;
+    text-align: justify;
 
-  @include breakpoint-down(small){
-    margin-bottom: 30px;
-    padding:0px;
-  }
+    @include breakpoint-down(small) {
+        margin-bottom: 30px;
+        padding: 0px;
+    }
 }
 
 .faq-t {
-  -moz-transform: rotate(-135deg);
-  -ms-transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-  transform: rotate(-45deg);
-  display: inline-block;
-  float: right;
-  position: relative;
-  top: -33px;
-  right: 10px;
-  width: 10px;
-  height: 10px;
-  background: transparent;
-  border-left: 2px solid $light_blue;
-  border-bottom: 2px solid $light_blue;
-  transition: all .8s ease-in-out;
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-45deg);
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: -33px;
+    right: 10px;
+    width: 10px;
+    height: 10px;
+    background: transparent;
+    border-left: 2px solid $light_blue;
+    border-bottom: 2px solid $light_blue;
+    transition: all 0.8s ease-in-out;
 
-  @include breakpoint-down(small){
-    display:none;
-  }
+    @include breakpoint-down(small) {
+        display: none;
+    }
 }
 
 .faq-o {
-  top: -50px;
-  -moz-transform: rotate(-225deg);
-  -ms-transform: rotate(-225deg);
-  -webkit-transform: rotate(-225deg);
-  transform: rotate(-225deg);
-  top: -33px;
+    top: -50px;
+    -moz-transform: rotate(-225deg);
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+    top: -33px;
 }
-
-
 
 .image {
-  position: relative;
-  top: 0;
-  left: 0;
-  flex-grow: 1;
-  align-self: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    flex-grow: 1;
+    align-self: center;
 
-  > img {
-    &:nth-child(1) {
-      object-fit: scale-down;
-      margin-top: 0;
-      margin-bottom: 0;
-      position: relative;
-      top: 0;
-      left: -90px;
-      z-index: 2;
-          
-    @include breakpoint-down(large) {
-    
-      width: 100%;
-      max-width: 100%;
-      object-fit: scale-down;
-      margin-top: 0;
-      margin-bottom: 0;
-      top: 0px;
-      left: 0px;
+    > img {
+        &:nth-child(1) {
+            object-fit: scale-down;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: relative;
+            top: 0;
+            left: -90px;
+            z-index: 2;
 
+            @include breakpoint-down(large) {
+                width: 100%;
+                max-width: 100%;
+                object-fit: scale-down;
+                margin-top: 0;
+                margin-bottom: 0;
+                top: 0px;
+                left: 0px;
+            }
+        }
+
+        &:nth-child(2) {
+            object-fit: scale-down;
+            margin-top: 0;
+            margin-bottom: 0;
+            position: absolute;
+            top: 2px;
+            left: -72px;
+            z-index: 1;
+            width: 30rem;
+
+            @include breakpoint-down(large) {
+                width: 100%;
+                max-width: 100%;
+                object-fit: scale-down;
+                margin-top: 0;
+                margin-bottom: 0;
+                top: 0px;
+                left: 0px;
+            }
+        }
     }
-  }
-
-    &:nth-child(2) {
-      object-fit: scale-down;
-      margin-top: 0;
-      margin-bottom: 0;
-      position: absolute;
-      top: 2px;
-      left: -72px;
-      z-index: 1;
-      width: 30rem;
-            
-      @include breakpoint-down(large) {
-      
-        width: 100%;
-        max-width: 100%;
-        object-fit: scale-down;
-        margin-top: 0;
-        margin-bottom: 0;
-        top: 0px;
-        left: 0px;
-
-      }
-    }
-  }
 }
-
