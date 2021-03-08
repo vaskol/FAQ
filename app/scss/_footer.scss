@@ -1,18 +1,17 @@
 footer {
-  color: $violet;
-  font-size:$font-sm;
-  .attribution{
-    margin-top: -1rem;
+    color: $violet;
+    font-size: $font-sm;
+    .attribution {
+        margin-top: -1rem;
 
-    a{
-      text-decoration-line: none;
-    &:visited{
-      color:$dark_blue;
+        a {
+            text-decoration-line: none;
+            &:visited {
+                color: $dark_blue;
+            }
+            &:hover {
+                color: $dark_gray;
+            }
+        }
     }
-    &:hover{
-      color:$dark_gray;
-    }
-  }
-}
-
 }
