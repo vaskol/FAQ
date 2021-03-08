@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 100%;
+    color: $dark_blue;
+  }
+
+body {
+  background-color:$blue;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  justify-content: center;
+
+  > main:nth-child(1) {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+main {
+  margin: 2em;
+  position: relative;
+  box-sizing: border-box;
+  padding: 6em 1.5em;
+  display: flex;
+  flex-direction: row-reverse;
+  border-radius: 1rem;
+  background-color: $white;
+  justify-items: center;
+  justify-self: center;
+  max-width: 60rem;
+  box-shadow: 0px 0px 20px 3px $dark_blue;
+  
+  
+  @include breakpoint-down(large){
+
+    flex-direction: column-reverse;
+    align-items: center;
+    }
+
+    @include breakpoint-down(small){
+        padding: 10px;
+    }
+    
+}
+
